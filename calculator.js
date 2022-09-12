@@ -7,9 +7,12 @@ let temp = "";
 form.addEventListener("click", (event) => {
   event.preventDefault();
   let value = event.target.id;
-  answerHtml.innerHTML = value;
-  temp = temp + value;
-  console.log(temp);
+  if (value !== "equal") {
+    answerHtml.innerHTML = value;
+    temp = temp + value;
+  }
+
+  //   console.log(temp);
 });
 
 // equal to
